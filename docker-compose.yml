@@ -1,0 +1,12 @@
+  
+version: '3.8'
+
+services:
+  web:
+    build: ./flask
+  nginx:
+    build: ./nginx
+    ports:
+      - 8080:80
+    depends_on:
+      - web
