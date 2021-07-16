@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gunicorn -c config.py hello:app
+gunicorn --bind 0.0.0.0:5000 hello:app
